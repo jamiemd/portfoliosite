@@ -1,34 +1,26 @@
-import React, { Component } from 'react';
-import Intro from "./intro";
-import Carousel from "./carousel";
+import React, { Component } from "react";
+import Navigation from "./nav";
+import Title from "./title";
+import About from "./about";
+import Portfolio from "./portfolio";
 import Blog from "./blog";
+import Contact from "./contact";
 
 class Home extends Component {
   render() {
     return (
-    <div style={container}>
-     <Intro/>
-     <Carousel/>
-     <Blog/>
-      <div style={contact}>
-      Drop me message at contact@jamiedomingo.com
-        </div>
-        </div>
-    )}
-
-
+      <div style={container}>
+        <Navigation />
+        <Title />
+        <About />
+        <Portfolio />
+        <Blog />
+        <Contact />
+      </div>
+    );
+  }
 }
 
-const container = {
-  width: '800px'
-}
-
-
-const contact = {
-  color: 'blue'
-}
-
-
-
+const container = {};
 
 export default Home;

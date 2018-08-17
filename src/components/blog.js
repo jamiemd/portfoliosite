@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Blog extends Component {
   render() {
     return (
-      <div style={container}>
+      <div id="blog" style={container}>
         <div style={title}>Blog</div>
         <div style={blogPostsContainer}>
           <a href="https://medium.com/@jamiedomingo/what-i-learned-at-lambda-school-eb6655b14ef">
@@ -22,16 +22,16 @@ class Blog extends Component {
 }
 
 const container = {
-  height: "900px",
-  backgroundColor: "#f9f9f9"
+  height: "800px",
+  backgroundColor: "#B9B9B9"
 };
 
 const title = {
-  fontSize: "25px",
-  letterSpacing: "2px",
+  fontSize: "30px",
+  letterSpacing: "3px",
   paddingTop: "100px",
   paddingBottom: "80px",
-  color: "#181717"
+  color: "white"
 };
 
 const blogPostsContainer = {
@@ -46,8 +46,8 @@ const blogPostsContainer = {
 const post = {
   width: "500px",
   height: "350px",
-  border: ".5px solid",
-  borderRadius: "1%",
+  // border: ".5px solid",
+  // borderRadius: "1%",
   padding: "15px",
   backgroundColor: "white"
 };

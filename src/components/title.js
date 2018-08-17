@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Title = () => {
   return (
@@ -17,13 +17,14 @@ const container = {
   justifyContent: "center",
   flexDirection: "column",
   alignItems: "center",
-  paddingTop: "50px"
+  paddingTop: "50px",
+  backgroundColor: "#FF9999"
 };
 
 const circle = {
-  height: "200px",
-  width: "200px",
-  backgroundColor: "gray",
+  height: "250px",
+  width: "250px",
+  backgroundColor: "white",
   borderRadius: "50%",
   textAlign: "center",
   marginBottom: "30px"
@@ -32,7 +33,8 @@ const circle = {
 const name = {
   fontSize: "40px",
   textDecoration: "none",
-  letterSpacing: "5px"
+  letterSpacing: "4px",
+  color: "white"
 };
 
 export default Title;

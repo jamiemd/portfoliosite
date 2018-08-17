@@ -13,9 +13,9 @@ class Portfolio extends Component {
       name: ["Decision Jam", "WikaKita", "Lantern Drop", "Sushi Match"],
       description: [
         "An app that allows users to vote on team decisions. I was part of a team of 3 where I was tasked with the creation of the frontend using React and the overall visual design using CSS. I also implemented the Stripe payment system to both the front and back ends.",
-        "A Tagalog language learning game. I used the MERN stack as well as Redux for storing state.",
-        "A Japanese kana typing game where I used Unity and also created all of the images.",
-        "A simple matching game using the theme of sushi. I used Illustrator to draw all of the game screens and individual sushi and card images."
+        "A Tagalog language learning game created with React and Redux with MongoDB for the database",
+        "A Japanese kana typing game where I used Unity with C#. I created all the images with Illustrator. ",
+        "A simple matching game using the theme of sushi. I provided all the game screens and individual sushi and card images using Illustrator."
       ],
       currentIndex: 0
     };
@@ -41,17 +41,22 @@ class Portfolio extends Component {
     console.log("this.state", this.state);
     console.log("this.props", this.props);
     return (
-      <div style={container}>
+      <div id="portfolio" style={container}>
         <div style={title}>Portfolio</div>
         <div style={carousel}>
           <button style={arrow} onClick={e => this.nextSlide("left")}>
             &lt;
           </button>
-          <div style={imageContainer}>
-            <img
-              style={image}
-              src={this.state.images[this.state.currentIndex]}
-            />
+          <div style={slide}>
+            <div style={imageBox}>
+              <div>
+                <img
+                  style={image}
+                  src={this.state.images[this.state.currentIndex]}
+                  alt="images"
+                />
+              </div>
+            </div>
             <div style={name}>{this.state.name[this.state.currentIndex]}</div>
             <div style={description}>
               {this.state.description[this.state.currentIndex]}
@@ -67,12 +72,12 @@ class Portfolio extends Component {
 }
 
 const container = {
-  height: "1000px"
+  height: "1100px"
 };
 
 const title = {
-  fontSize: "25px",
-  letterSpacing: "2px",
+  fontSize: "30px",
+  letterSpacing: "3px",
   paddingTop: "100px",
   paddingBottom: "80px",
   color: "#181717"
@@ -81,34 +86,48 @@ const title = {
 const carousel = {
   paddingTop: "20px",
   display: "flex",
-  justifyContent: "center"
+  justifyContent: "space-around"
 };
 
 const arrow = {
   border: "none",
   fontSize: "45px",
-  color: "gray"
+  color: "gray",
+  outline: "none"
 };
 
-const imageContainer = {
+const slide = {
   display: "flex",
-  flexDirection: "column"
+  flexDirection: "column",
+  justifyContent: "center"
+};
+
+const imageBox = {
+  width: "700px",
+  height: "500px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center"
 };
 
 const image = {
-  width: "600px",
-  marginLeft: "300px",
-  marginRight: "300px"
+  width: "700px"
 };
 
 const name = {
   fontSize: "20px",
+  fontWeight: "500",
   paddingTop: "50px"
 };
 
 const description = {
-  fontSize: "14px",
-  paddingTop: "30px"
+  fontSize: "16px",
+  paddingTop: "30px",
+  width: "500px",
+  height: "200px",
+  textAlign: "left",
+  lineHeight: "2",
+  margin: "auto"
 };
 
 export default Portfolio;

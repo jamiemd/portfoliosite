@@ -1,23 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Navigation = () => {
   return (
-    <div style={container}>
-      <a style={navLinks} title="About">
-        About
-      </a>
-      <div style={divider}>/</div>
-      <a style={navLinks} title="Portfolio">
-        Portfolio
-      </a>
-      <div style={divider}>/</div>
-      <a style={navLinks} title="Blog">
-        Blog
-      </a>
-      <div style={divider}>/</div>
-      <a style={navLinks} title="Contact">
-        Contact
-      </a>
+    <div>
+      <div style={container}>
+        <a style={navLinks} href="#about" title="About">
+          About
+        </a>
+        <div style={divider}>/</div>
+        <a style={navLinks} href="#portfolio" title="Portfolio">
+          Portfolio
+        </a>
+        <div style={divider}>/</div>
+        <a style={navLinks} href="#blog" title="Blog">
+          Blog
+        </a>
+      </div>
     </div>
   );
 };
@@ -34,11 +32,22 @@ const container = {
 
 const navLinks = {
   padding: "20px",
-  letterSpacing: "1px"
+  letterSpacing: "1px",
+  fontSize: "18px",
+  textDecoration: "none",
+  color: "black"
 };
 
 const divider = {
   padding: "20px"
+};
+
+const hrLine = {
+  border: 0,
+  height: ".5px",
+  width: "400px",
+  backgroundColor: "black",
+  marginBottom: "20px"
 };
 
 export default Navigation;

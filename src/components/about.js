@@ -1,29 +1,59 @@
-import React, { Component } from "react";
+import React from "react";
 
 const About = () => {
   return (
-    <div style={container}>
+    <div id="about" style={container}>
       <div style={title}>About</div>
       <div style={content}>
         {/* <hr style={hrLine} /> */}
         <div style={bio}>
-          I am web developer focused on building websites using React/Redux with
-          Express and Node for the backend. I also enjoy learning C# with Unity
-          as well as desigining with Illustrator and Photoshop.
+          I am a web developer based in San Francisco. My focus is building
+          websites using Javascript with React, Redux, HTML, CSS, Express, Node,
+          and MongoDB. Creating clean functional websites is my goal. I also
+          enjoy working on Unity using C# as well as desigining with Illustrator
+          and Photoshop.
         </div>
+        {/* <div id="contact">
+          <div style={contact}>Email me at</div>
+          <a style={email} href="mailto:name@email.com">
+            contact@jamiedomingo.com
+          </a>
+        </div> */}
         <div style={links}>
-          <div style={linkPair}>
-            <div style={icon} />
-            <div style={link}>Resume</div>
-          </div>
-          <div style={linkPair}>
-            <div style={icon} />
-            <div style={link}>LinkedIn</div>
-          </div>
-          <div style={linkPair}>
-            <div style={icon} />
-            <div style={link}>GitHub</div>
-          </div>
+          <a
+            style={anchor}
+            href={require("../images/jamiedomingo_resume.pdf")}
+            download
+          >
+            <div style={linkPair}>
+              <img
+                style={icon}
+                src={require("../images/download_icon.png")}
+                alt="Download Icon"
+              />
+              <div style={iconText}>Resume</div>
+            </div>
+          </a>
+          <a style={anchor} href="https://www.linkedin.com/in/jamiedomingo/">
+            <div style={linkPair}>
+              <img
+                style={icon}
+                src={require("../images/Linkedin_icon.svg")}
+                alt="LinkedIn Icon"
+              />
+              <div style={iconText}>LinkedIn</div>
+            </div>
+          </a>
+          <a style={anchor} href="https://github.com/jamiemd">
+            <div style={linkPair}>
+              <img
+                style={icon}
+                src={require("../images/github_icon.png")}
+                alt="GitHub Icon"
+              />
+              <div style={iconText}>GitHub</div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -33,15 +63,15 @@ const About = () => {
 const container = {
   margin: "0, auto",
   height: "600px",
-  backgroundColor: "#f9f9f9"
+  backgroundColor: "#F2F2F2"
 };
 
 const title = {
-  fontSize: "25px",
-  letterSpacing: "2px",
+  fontSize: "30px",
+  letterSpacing: "3px",
   paddingTop: "100px",
   paddingBottom: "80px",
-  color: "#181717"
+  color: "#606060"
 };
 
 const hrLine = {
@@ -66,7 +96,20 @@ const bio = {
   letterSpacing: "1.5px",
   textAlign: "left",
   paddingTop: "15px",
-  color: "#181717"
+  color: "#606060"
+};
+
+const contact = {
+  color: "606060",
+  letterSpacing: "2px",
+  fontSize: "14px",
+  paddingBottom: "2px"
+};
+
+const email = {
+  textDecoration: "none",
+  color: "606060",
+  fontSize: "14px"
 };
 
 // links
@@ -77,20 +120,27 @@ const links = {
 };
 
 const linkPair = {
-  display: "flex"
+  border: "1px solid black",
+  display: "flex",
+  marginBottom: "30px",
+  // borderRadius: "10px",
+  padding: "10px 15px 10px 15px"
+};
+
+const anchor = {
+  textDecoration: "none"
 };
 
 const icon = {
-  backgroundColor: "gray",
-  width: "30px",
-  height: "30px",
-  marginRight: "40px"
+  width: "45px",
+  height: "45px",
+  marginRight: "20px"
 };
 
-const link = {
+const iconText = {
   textAlign: "left",
-  paddingBottom: "40px",
-  paddingTop: "3px"
+  paddingTop: "10px",
+  color: "black"
 };
 
 export default About;

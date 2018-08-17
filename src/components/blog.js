@@ -5,10 +5,16 @@ class Blog extends Component {
     return (
       <div style={container}>
         <div style={title}>Blog</div>
-        <div style={blogPostContainer}>
-          <div>What I learned in Lambda School</div>
-          <div>August 17, 2018</div>
-          <div>blah blah blah</div>
+        <div style={blogPostsContainer}>
+          <a href="https://medium.com/@jamiedomingo/what-i-learned-at-lambda-school-eb6655b14ef">
+            <div style={post}>
+              <img
+                style={postOne}
+                src={require("../images/blogPostOne.png")}
+                alt="What I learned in Lambda School"
+              />
+            </div>
+          </a>
         </div>
       </div>
     );
@@ -28,11 +34,26 @@ const title = {
   color: "#181717"
 };
 
-const blogPostContainer = {
+const blogPostsContainer = {
   margin: "0 auto",
-  width: "600px",
+  width: "900px",
   height: "500px",
-  padding: "50px"
+  padding: "50px",
+  display: "flex",
+  justifyContent: "center"
+};
+
+const post = {
+  width: "500px",
+  height: "350px",
+  border: ".5px solid",
+  borderRadius: "1%",
+  padding: "15px",
+  backgroundColor: "white"
+};
+
+const postOne = {
+  paddingTop: "15px"
 };
 
 export default Blog;

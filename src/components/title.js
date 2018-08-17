@@ -12,7 +12,7 @@ const Title = () => {
 };
 
 const container = {
-  height: "800px",
+  height: "700px",
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
@@ -25,7 +25,8 @@ const circle = {
   width: "200px",
   backgroundColor: "gray",
   borderRadius: "50%",
-  textAlign: "center"
+  textAlign: "center",
+  marginBottom: "30px"
 };
 
 const name = {

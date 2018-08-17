@@ -7,10 +7,9 @@ const About = () => {
       <div style={content}>
         {/* <hr style={hrLine} /> */}
         <div style={bio}>
-          I am web developer living in the San Francisco Bay Area focused on
-          creating websites using React/Redux with Express and Node for the
-          backend. I also enjoy learning C# with Unity as well as desigining
-          with Illustrator and Photoshop.
+          I am web developer focused on building websites using React/Redux with
+          Express and Node for the backend. I also enjoy learning C# with Unity
+          as well as desigining with Illustrator and Photoshop.
         </div>
         <div style={links}>
           <div style={linkPair}>

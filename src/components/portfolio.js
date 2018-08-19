@@ -73,7 +73,7 @@ class Portfolio extends Component {
 
 const container = {
   height: "1100px",
-  backgroundColor: "#D3E5FF"
+  backgroundColor: "#DBEAFF"
 };
 
 const title = {
@@ -94,7 +94,7 @@ const arrow = {
   border: "none",
   fontSize: "45px",
   outline: "none",
-  backgroundColor: "#D3E5FF"
+  backgroundColor: "#DBEAFF"
 };
 
 const slide = {

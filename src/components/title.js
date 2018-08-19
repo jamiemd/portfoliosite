@@ -19,7 +19,7 @@ const backgroundColor = {
 };
 
 const container = {
-  height: "900px",
+  height: "800px",
   paddingTop: "50px",
   width: "70%",
   margin: "auto"

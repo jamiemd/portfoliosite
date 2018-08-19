@@ -5,6 +5,7 @@ class Blog extends Component {
     return (
       <div id="blog" style={container}>
         <div style={title}>Blog</div>
+        <div style={description}>Check out my blog posts on Medium.</div>
         <div style={blogPostsContainer}>
           <a href="https://medium.com/@jamiedomingo/what-i-learned-at-lambda-school-eb6655b14ef">
             <div style={post}>
@@ -15,6 +16,9 @@ class Blog extends Component {
               />
             </div>
           </a>
+          <a href="">
+            <div style={post}>New post on the way!</div>
+          </a>
         </div>
       </div>
     );
@@ -23,15 +27,21 @@ class Blog extends Component {
 
 const container = {
   height: "800px",
-  backgroundColor: "#B9B9B9"
+  width: "60%",
+  margin: "auto"
 };
 
 const title = {
   fontSize: "30px",
   letterSpacing: "3px",
   paddingTop: "100px",
-  paddingBottom: "80px",
-  color: "white"
+  paddingBottom: "20px",
+  textAlign: "center"
+};
+
+const description = {
+  textAlign: "center",
+  letterSpacing: "1px"
 };
 
 const blogPostsContainer = {
@@ -40,16 +50,15 @@ const blogPostsContainer = {
   height: "500px",
   padding: "50px",
   display: "flex",
-  justifyContent: "center"
+  justifyContent: "space-around"
 };
 
 const post = {
   width: "500px",
   height: "350px",
-  // border: ".5px solid",
-  // borderRadius: "1%",
   padding: "15px",
-  backgroundColor: "white"
+  margin: "30px",
+  border: "1px solid gray"
 };
 
 const postOne = {

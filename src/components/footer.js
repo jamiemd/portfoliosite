@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div id="contact" style={container}>
-      <div style={name}>Jamie Domingo 2018</div>
+      <div style={name}>2018 Jamie Domingo</div>
     </div>
   );
 };

@@ -4,21 +4,27 @@ const About = () => {
   return (
     <div id="about" style={container}>
       <div style={title}>About</div>
+      <div style={pic} />
+
       <div style={content}>
         {/* <hr style={hrLine} /> */}
-        <div style={bio}>
-          I am a web developer based in San Francisco. My focus is building
-          websites using Javascript with React, Redux, HTML, CSS, Express, Node,
-          and MongoDB. Creating clean functional websites is my goal. I also
-          enjoy working on Unity using C# as well as desigining with Illustrator
-          and Photoshop.
+
+        <div style={leftColumnContainer}>
+          <div style={bio}>
+            After a few years in corporate accounting, I took the plunge and
+            enrolled in Lambda’s School’s computer science program where I
+            learned web development using Javascript, React, Redux, HTML, CSS,
+            Node, Express, and MongoDB as well as computer science theory. With
+            my new set of skills, I’d like to create clean and functional web
+            application.
+          </div>
+          <div style={contact}>
+            Email me at:
+            <a style={email} href="mailto:name@email.com">
+              contact@jamiedomingo.com
+            </a>
+          </div>
         </div>
-        {/* <div id="contact">
-          <div style={contact}>Email me at</div>
-          <a style={email} href="mailto:name@email.com">
-            contact@jamiedomingo.com
-          </a>
-        </div> */}
         <div style={links}>
           <a
             style={anchor}
@@ -62,16 +68,14 @@ const About = () => {
 
 const container = {
   margin: "0, auto",
-  height: "600px",
-  backgroundColor: "#F2F2F2"
+  height: "1000px"
 };
 
 const title = {
   fontSize: "30px",
   letterSpacing: "3px",
   paddingTop: "100px",
-  paddingBottom: "80px",
-  color: "#606060"
+  paddingBottom: "80px"
 };
 
 const hrLine = {
@@ -82,12 +86,22 @@ const hrLine = {
   marginBottom: "20px"
 };
 
+const pic = {
+  height: "250px",
+  width: "250px",
+  backgroundColor: "gray",
+  borderRadius: "50%",
+  margin: "auto",
+  marginBottom: "80px"
+};
+
 const content = {
   display: "flex",
-  justifyContent: "space-around",
   margin: "0 auto",
-  width: "1200px"
+  width: "60%"
 };
+
+const leftColumnContainer = {};
 
 const bio = {
   fontSize: "20px",
@@ -95,28 +109,28 @@ const bio = {
   lineHeight: "2",
   letterSpacing: "1.5px",
   textAlign: "left",
-  paddingTop: "15px",
-  color: "#606060"
+  color: "black",
+  marginRight: "100px",
+  marginBottom: "50px"
 };
 
 const contact = {
-  color: "606060",
-  letterSpacing: "2px",
-  fontSize: "14px",
-  paddingBottom: "2px"
+  color: "black",
+  letterSpacing: "1px",
+  fontSize: "20px",
+  paddingBottom: "2px",
+  textAlign: "left"
 };
 
 const email = {
   textDecoration: "none",
-  color: "606060",
-  fontSize: "14px"
+  color: "red",
+  fontSize: "20px",
+  marginLeft: "3px"
 };
 
-// links
-
 const links = {
-  fontSize: "20px",
-  marginTop: "20px"
+  fontSize: "20px"
 };
 
 const linkPair = {

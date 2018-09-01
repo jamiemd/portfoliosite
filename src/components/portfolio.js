@@ -7,7 +7,7 @@ class Portfolio extends Component {
       images: [
         require("../images/decisionJam.png"),
         require("../images/WikaKita.png"),
-        require("../images/recipeApp.png"),
+        require("../images/RecipeApp.png"),
         "https://raw.githubusercontent.com/jamiemd/jamiemd.github.com/master/images/projects/sushi_match.png"
       ],
       name: ["Decision Jam", "WikaKita", "Lantern Drop", "Sushi Match"],

@@ -8,16 +8,31 @@ class Blog extends Component {
         <div style={description}>Check out my blog posts on Medium.</div>
         <div style={blogPostsContainer}>
           <a href="https://medium.com/@jamiedomingo/what-i-learned-at-lambda-school-eb6655b14ef">
-            <div style={post}>
+            <div style={postContainer}>
               <img
-                style={postOne}
+                style={post}
                 src={require("../images/blogPostOne.png")}
                 alt="What I learned in Lambda School"
               />
             </div>
           </a>
-          <a href="">
-            <div style={post}>New post on the way!</div>
+          <a href="https://medium.com/@jamiedomingo/how-i-contributed-to-a-code-base-that-was-new-to-me-c0e42eb0c37e">
+            <div style={postContainer}>
+              <img
+                style={post}
+                src={require("../images/blogPostTwo.png")}
+                alt="How I Contributed to a Code Base That Was New to Me"
+              />
+            </div>
+          </a>
+          <a href="https://medium.com/@jamiedomingo/what-i-learned-at-lambda-school-eb6655b14ef">
+            <div style={postContainer}>
+              <img
+                style={post}
+                src={require("../images/blogPostOne.png")}
+                alt="What I learned in Lambda School"
+              />
+            </div>
           </a>
         </div>
       </div>
@@ -47,22 +62,22 @@ const description = {
 const blogPostsContainer = {
   margin: "0 auto",
   width: "900px",
-  height: "500px",
-  padding: "50px",
+  padding: "30px",
   display: "flex",
   justifyContent: "space-around"
 };
 
-const post = {
-  width: "500px",
-  height: "350px",
+const postContainer = {
+  width: "350px",
+  height: "240px",
   padding: "15px",
   margin: "30px",
   border: "1px solid gray"
 };
 
-const postOne = {
-  paddingTop: "15px"
+const post = {
+  paddingTop: "15px",
+  maxWidth: "350px"
 };
 
 export default Blog;

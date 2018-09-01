@@ -5,17 +5,23 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       images: [
-        "Decision Jam Image Placeholder",
-        "WikaKita",
-        "Latern Drop",
+        require("../images/decisionJam.png"),
+        require("../images/WikaKita.png"),
+        require("../images/recipeApp.png"),
         "https://raw.githubusercontent.com/jamiemd/jamiemd.github.com/master/images/projects/sushi_match.png"
       ],
       name: ["Decision Jam", "WikaKita", "Lantern Drop", "Sushi Match"],
       description: [
         "An app that allows users to vote on team decisions. I was part of a team of 3 where I was tasked with the creation of the frontend using React and the overall visual design using CSS. I also implemented the Stripe payment system to both the front and back ends.",
         "A Tagalog language learning game created with React and Redux with MongoDB for the database",
-        "A Japanese kana typing game where I used Unity with C#. I created all the images with Illustrator. ",
+        "An app that lists all recipes created by the user.  I utilized Vue.js for the frontend.",
         "A simple matching game using the theme of sushi. I provided all the game screens and individual sushi and card images using Illustrator."
+      ],
+      gitHubLink: [
+        "https://github.com/jamiemd/decisionjam",
+        "https://github.com/jamiemd/WikaKita",
+        "https://github.com/jamiemd/RecipeApp_Vue.js",
+        ""
       ],
       currentIndex: 0
     };
@@ -61,6 +67,7 @@ class Portfolio extends Component {
             <div style={description}>
               {this.state.description[this.state.currentIndex]}
             </div>
+            {/* <a href={this.state.gitHubLink[this.state.currentIndex]} /> */}
           </div>
           <button style={arrow} onClick={e => this.nextSlide("right")}>
             >
@@ -112,7 +119,10 @@ const imageBox = {
 };
 
 const image = {
-  width: "700px"
+  width: "700px",
+  borderRadius: "10px",
+  boxShadow: "2px 5px 10px grey",
+  backgroundColor: "white"
 };
 
 const name = {

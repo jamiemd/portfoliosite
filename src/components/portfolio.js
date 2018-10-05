@@ -7,21 +7,21 @@ class Portfolio extends Component {
       images: [
         require("../images/decisionJam.png"),
         require("../images/WikaKita.png"),
-        require("../images/RecipeApp.png"),
-        "https://raw.githubusercontent.com/jamiemd/jamiemd.github.com/master/images/projects/sushi_match.png"
+        require("../images/ImageGallery.png"),
+        require("../images/RecipeApp.png")
       ],
-      name: ["Decision Jam", "WikaKita", "Lantern Drop", "Sushi Match"],
+      name: ["Decision Jam", "WikaKita", "Image Gallery", "RecipeApp"],
       description: [
         "An app that allows users to vote on team decisions. I was part of a team of 3 where I was tasked with the creation of the frontend using React and the overall visual design using CSS. I also implemented the Stripe payment system to both the front and back ends.",
         "A Tagalog language learning game created with React and Redux with MongoDB for the database",
-        "An app that lists all recipes created by the user.  I utilized Vue.js for the frontend.",
-        "A simple matching game using the theme of sushi. I provided all the game screens and individual sushi and card images using Illustrator."
+        "An immage gallery app that let's user's upload and save their images. Created using FusionJS",
+        "An app that lists all recipes created by the user.  I utilized Vue.js for the frontend."
       ],
       gitHubLink: [
         "https://github.com/jamiemd/decisionjam",
         "https://github.com/jamiemd/WikaKita",
-        "https://github.com/jamiemd/RecipeApp_Vue.js",
-        ""
+        "https://github.com/jamiemd/image-gallery",
+        "https://github.com/jamiemd/RecipeApp_Vue.js"
       ],
       currentIndex: 0
     };
@@ -44,8 +44,6 @@ class Portfolio extends Component {
   };
 
   render() {
-    // console.log("this.state", this.state);
-    // console.log("this.props", this.props);
     return (
       <div id="portfolio" style={container}>
         <div style={title}>Portfolio</div>
@@ -67,7 +65,7 @@ class Portfolio extends Component {
             <div style={description}>
               {this.state.description[this.state.currentIndex]}
             </div>
-            {/* <a href={this.state.gitHubLink[this.state.currentIndex]} /> */}
+            <a href={this.state.gitHubLink[this.state.currentIndex]} />
           </div>
           <button style={arrow} onClick={e => this.nextSlide("right")}>
             >

@@ -44,8 +44,8 @@ class Portfolio extends Component {
   };
 
   render() {
-    console.log("this.state", this.state);
-    console.log("this.props", this.props);
+    // console.log("this.state", this.state);
+    // console.log("this.props", this.props);
     return (
       <div id="portfolio" style={container}>
         <div style={title}>Portfolio</div>

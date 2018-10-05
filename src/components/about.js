@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div id="about" style={container}>
       <div style={title}>About</div>
-      <div style={pic} />
+      {/* <div style={pic} /> */}
 
       <div style={content}>
         {/* <hr style={hrLine} /> */}
@@ -68,7 +68,7 @@ const About = () => {
 
 const container = {
   margin: "0, auto",
-  height: "1000px"
+  height: "650px"
 };
 
 const title = {

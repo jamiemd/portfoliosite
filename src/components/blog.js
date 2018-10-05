@@ -91,7 +91,7 @@ const blogPostsContainer = {
   display: "grid",
   gridTemplateColumns: "repeat(3, 450px)",
   justifyContent: "center",
-  margin: "5px"
+  margin: "3px"
 };
 
 const postContainer = {
